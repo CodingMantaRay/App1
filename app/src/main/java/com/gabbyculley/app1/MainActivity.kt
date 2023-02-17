@@ -84,12 +84,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val cameraActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         result ->
             if (result.resultCode == RESULT_OK) {
-                if (Build.VERSION.SDK_INT >= 33) {
-                    val pfpThumbnail = result.data!!.getParcelableExtra("data", Bitmap::class.java)
-                    ivPFP!!.setImageBitmap(pfpThumbnail)
-                } else {
-                    val pfpThumbnail = result.data!!.getParcelableExtra<Bitmap>("data")
-                    ivPFP!!.setImageBitmap(pfpThumbnail)
+                if (result.data != null) {
+                    if (Build.VERSION.SDK_INT >= 33) {
+                        val pfpThumbnail =
+                            result.data!!.getParcelableExtra("data", Bitmap::class.java)
+                        ivPFP!!.setImageBitmap(pfpThumbnail)
+                    } else {
+                        val pfpThumbnail = result.data!!.getParcelableExtra<Bitmap>("data")
+                        ivPFP!!.setImageBitmap(pfpThumbnail)
+                    }
                 }
             }
     }
