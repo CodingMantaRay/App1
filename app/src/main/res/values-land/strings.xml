@@ -6,4 +6,5 @@
     <string name="take_profile_picture">Take Profile Picture</string>
     <string name="submit">Submit</string>
     <string name="thumbnail_of_profile_picture">Thumbnail of profile picture</string>
+    <string name="space">" "</string>
 </resources>
