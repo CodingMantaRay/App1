@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App1</string>
+    <string name="is_logged_in">is logged in!</string>
+    <string name="first_name">First Name:</string>
+    <string name="middle_name">Middle Name:</string>
+    <string name="optional">(optional)</string>
+    <string name="last_name">Last Name:</string>
+    <string name="take_profile_picture">Take Profile Picture</string>
+    <string name="submit">Submit</string>
+    <string name="thumbnail_of_profile_picture">Thumbnail of profile picture</string>
+</resources>
